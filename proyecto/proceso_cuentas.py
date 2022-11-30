@@ -1,6 +1,7 @@
 import csv
 from persona import Persona
 
+
 def crear_cuentas():
 
     personas = {}

@@ -8,13 +8,12 @@ class Cuenta(object):
         self.movimientos = []
         self.activa = True
     
-    
     def crear_movimiento(self, descripcion, monto):
         movimiento = MovimientoCuenta(descripcion, monto)
         self.movimientos.append(movimiento)
 
     def __str__(self):
-        #TODO: Completarpara que quede mejor con nro de cuenta
+        #TODO: Completar para que quede mejor con nro de cuenta
         print(f"CUENTA comun {self.cantidad}")
 
 
@@ -24,6 +23,9 @@ class MovimientoCuenta(object):
         self.fecha_y_hora = datetime.datetime.now()
         self.descripcion = descripcion
         self.monto = monto_del_movimiento
+
+    def get_fecha_y_hora(self):
+        return self.fecha_y_hora
     
     def __str__(self):
         #Completar como pide en punto 3
